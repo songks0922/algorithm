@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main(void) {
+int main(void)
+{
   int x, y;
   cin >> x >> y;
   if (x > 0 && y > 0)
@@ -20,9 +21,6 @@ int main(void) {
   {
     cout << "4" << endl;
   }
-  
-  
-  
 
   return 0;
 }

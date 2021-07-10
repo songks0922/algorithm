@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-int main(void) {
+int main(void)
+{
   int score;
   cin >> score;
-  score = score /10;
+  score = score / 10;
   switch (score)
   {
   case 10:
@@ -15,10 +16,10 @@ int main(void) {
     cout << "B" << endl;
     break;
   case 7:
-    cout << "C" << endl;  
+    cout << "C" << endl;
     break;
   case 6:
-    cout << "D" << endl;  
+    cout << "D" << endl;
     break;
   default:
     cout << "F" << endl;
