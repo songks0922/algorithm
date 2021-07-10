@@ -176,6 +176,8 @@ ostream &operator<<(ostream &os, const heap<U> &a)
 int main(void)
 {
     int n, num;
+    std::ios::sync_with_stdio(false);
+
     cin >> n;
     heap<int> h(n);
     for (int i = 0; i < n; i++)
@@ -188,9 +190,8 @@ int main(void)
     {
         while (!h.isEmpty())
         {
-            cout << h.removeMin() << endl;
+            cout << h.removeMin() << "\n";
         }
-        cout << h << endl;
     }
     catch (SizeIsZero &e)
     {
