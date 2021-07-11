@@ -27,3 +27,4 @@ doc/**/*.pdf
 .vscode
 .vscode/settings.json
 .prettierrc
+Baekjoon/test.cpp
