@@ -28,3 +28,4 @@ doc/**/*.pdf
 .vscode/settings.json
 .prettierrc
 Baekjoon/test.cpp
+dataStructure/BST/bst.cpp
