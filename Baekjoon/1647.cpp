@@ -61,18 +61,18 @@ int main() {
 	
 	sort(v.begin(), v.end());
 	
-	int set[n];
+	int parent[n];
 	for(int i = 0; i < n; i++) {
-		set[i] = i;
+		parent[i] = i;
 	}
 	
 	int sum = 0;
   int cnt = 0;
 	for(int i = 0; i < v.size(); i++) {
 		// 즉 사이클이 발생하지 않을 때만 선택
-		if(!find(set, v[i].node[0] - 1, v[i].node[1] - 1)) {
+		if(!find(parent, v[i].node[0] - 1, v[i].node[1] - 1)) {
 			sum += v[i].dist; 
-			_union(set, v[i].node[0] - 1, v[i].node[1] - 1);
+			_union(parent, v[i].node[0] - 1, v[i].node[1] - 1);
       if (++cnt == n - 2) {
         break;
       }
