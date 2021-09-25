@@ -28,8 +28,10 @@ int main() {
     }
   }
 
-  auto it = remove_if(sums.begin(), sums.end(), [](int num) { return num > m;});
-  sums.resize(it - sums.begin());
+  // auto it = remove_if(sums.begin(), sums.end(), [](int num) { return num > m;});
+  // sums.resize(it - sums.begin());
+
+  sums.erase(remove_if(sums.begin(), sums.end(), [](int num) { return num > m;}), sums.end());
 
   int max = *max_element(sums.begin(), sums.end());
   cout << max << '\n';
