@@ -29,3 +29,4 @@ doc/**/*.pdf
 .prettierrc
 Baekjoon/test.cpp
 dataStructure/BST/bst.cpp
+python
