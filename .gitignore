@@ -30,3 +30,5 @@ doc/**/*.pdf
 Baekjoon/test.cpp
 dataStructure/BST/bst.cpp
 python
+java_algoritm
+.idea
