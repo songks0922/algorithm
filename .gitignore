@@ -29,7 +29,6 @@ doc/**/*.pdf
 .prettierrc
 Baekjoon/test.cpp
 dataStructure/BST/bst.cpp
-python
 java_algoritm/.idea
 java_algoritm/out
 java_algoritm/java_algoritm.iml
