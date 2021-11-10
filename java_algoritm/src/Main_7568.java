@@ -5,7 +5,6 @@ public class Main_7568 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
         int N, weight, height;
@@ -31,9 +30,6 @@ public class Main_7568 {
             }
             sb.append(rank).append(" ");
         }
-        bw.write(String.valueOf(sb));
-        bw.flush();
-        bw.close();
         br.close();
     }
 }
