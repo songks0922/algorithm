@@ -1,13 +1,14 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class Main_1032 {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int N = sc.nextInt();
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         String[] array = new String[N];
         for (int i = 0; i < N; i++) {
-            array[i] = sc.next();
+            array[i] = br.readLine();
         }
 
         StringBuilder sb = new StringBuilder();
@@ -28,6 +29,6 @@ public class Main_1032 {
             } else
                 sb.append('?');
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }
