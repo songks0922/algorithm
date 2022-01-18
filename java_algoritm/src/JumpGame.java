@@ -1,4 +1,8 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class JumpGame {
 
@@ -8,34 +12,35 @@ public class JumpGame {
 
 
     static int jump(int y, int x){
-        if(y>=n || x>= n){
-            return 0;
-        }
-        if(y ==n-1 && x==n-1){
-            return 1;
-        }
-        if(cache[y][x] != -1){
-            return cache[y][x];
-        }
+        if(y>=n || x>= n) return 0;
+
+        if(y ==n-1 && x==n-1) return 1;
+
+        if(cache[y][x] != -1) return cache[y][x];
+
         int jumpSize = board[y][x];
         return cache[y][x] = jump(y+jumpSize, x) | jump(y, x+jumpSize);
     }
 
-    public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
-        int tc = input.nextInt();
-
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int tc = Integer.parseInt(br.readLine());
+        StringBuilder sb = new StringBuilder();
         while(tc>0){
 
-            n = input.nextInt();
+            n = Integer.parseInt(br.readLine());
+            for (int i = 0; i < n; i++) {
+                Arrays.fill(cache[i], -1);
+            }
             for(int i=0; i<n; i++){
+                StringTokenizer st = new StringTokenizer(br.readLine(), " ");
                 for(int j=0; j<n; j++){
-                    board[i][j] =input.nextInt();
-                    cache[i][j] = -1;
+                    board[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
-            System.out.println (jump(0,0) !=0 ? "YES" : "NO");
+            sb.append(jump(0,0) !=0 ? "YES" : "NO").append("\n");
             tc--;
         }
+        System.out.println(sb);
     }
 }
