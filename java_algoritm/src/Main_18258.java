@@ -3,55 +3,56 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-class Queue {
-    private int[] queue;
-    private int frontIndex = 0;
-    private int backIndex = -1;
 
-    Queue() {
-    }
+public class Main_18258 {
+    static class Queue {
+        private int[] queue;
+        private int frontIndex = 0;
+        private int backIndex = -1;
 
-    Queue(int size){
-        queue = new int[size];
-    }
+        Queue() {
+        }
 
-    public void push(int x) {
-        queue[++backIndex] = x;
-    }
+        Queue(int size){
+            queue = new int[size];
+        }
 
-    public int size() {
-        return backIndex - frontIndex + 1;
-    }
+        public void push(int x) {
+            queue[++backIndex] = x;
+        }
 
-    public boolean isEmpty() {
-        if (size()==0)
-            return true;
-        else
-            return false;
-    }
+        public int size() {
+            return backIndex - frontIndex + 1;
+        }
 
-    public int pop() {
-        if (isEmpty())
-            return -1;
-        else
-            return queue[frontIndex++];
-    }
+        public boolean isEmpty() {
+            if (size()==0)
+                return true;
+            else
+                return false;
+        }
 
-    public int front() {
-        if (isEmpty())
-            return -1;
-        else
-            return queue[frontIndex];
-    }
+        public int pop() {
+            if (isEmpty())
+                return -1;
+            else
+                return queue[frontIndex++];
+        }
 
-    public int back() {
-        if (isEmpty())
-            return -1;
-        else
-            return queue[backIndex];
+        public int front() {
+            if (isEmpty())
+                return -1;
+            else
+                return queue[frontIndex];
+        }
+
+        public int back() {
+            if (isEmpty())
+                return -1;
+            else
+                return queue[backIndex];
+        }
     }
-}
-public class Main_10845 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
