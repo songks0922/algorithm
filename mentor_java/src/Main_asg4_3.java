@@ -14,7 +14,7 @@ public class Main_asg4_3 {
 
         for (int i = 0; i < cnt.length; i++) {
             if (cnt[i] == 1) {
-                answer = cnt[i];
+                answer = i + 1;
                 break;
             }
         }
