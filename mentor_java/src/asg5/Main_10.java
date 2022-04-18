@@ -7,19 +7,22 @@ public class Main_10 {
 
     static int solution(int[] order) {
         int answer = 0;
-        List<Integer> numList = new ArrayList<>();
+        boolean[] reserve = new boolean[1001];
+
         for (int i = 0; i < order.length; i++) {
-            numList.add(order[i]);
+            if (reserve[order[i]]) {
+                answer++;
+            } else {
+                reserve[order[i]] = true;
+            }
         }
-        Set<Integer> numSet = new HashSet<>(numList);
-        answer = numList.size() - numSet.size();
         return answer;
     }
 
     public static void main(String[] args) throws IOException {
 
         int[] order = {
-                30, 50, 70, 50, 30
+                10, 20, 30, 20, 10
         };
         System.out.println(solution(order));
     }
