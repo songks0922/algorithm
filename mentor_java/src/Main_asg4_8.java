@@ -13,9 +13,13 @@ public class Main_asg4_8 {
             cnt[arr[i]]++;
         }
         for (int i = 0; i < cnt.length; i++) {
-            if (cnt[i] > max) {
-                max = cnt[i];
-                answer = i;
+            if (cnt[i] >= max ) {
+                if (max == cnt[i] && answer < i) {
+                    answer = i;
+                } else {
+                    max = cnt[i];
+                    answer = i;
+                }
             }
         }
         return answer;

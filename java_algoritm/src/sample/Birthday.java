@@ -132,15 +132,17 @@ public class Birthday {
         this.name = name;
     }
 
+    public static void sayHello() {
+        System.out.println("Hello birthday");
+    }
+
     public static void main(String[] args) {
-        Birthday birthday1 = new Birthday();
-        System.out.println(birthday1);
-        Birthday birthday2 = new Birthday(0, 30, 30, "아무이름");
-        System.out.println(birthday2);
+//        Birthday birthday1 = new Birthday();
+//        System.out.println(birthday1);
+//        Birthday birthday2 = new Birthday(0, 30, 30, "아무이름");
+//        System.out.println(birthday2);
         Birthday birthday3 = new Birthday(2, 21);
-        System.out.println(birthday3.getMonth());
-        birthday3.setMonth(10);
-        System.out.println(birthday3.getMonth());
+        sayHello();
 
     }
 }

@@ -26,7 +26,7 @@ public class Main_2 {
 
     public static void main(String[] args) {
 
-        int[] arr = {1, 2, 5, 10};
+        int[] arr = {2,3,4,5,7,9,10};
         System.out.println(solution(arr));
     }
 }

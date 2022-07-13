@@ -7,6 +7,7 @@ public class Main_asg4_9 {
 
     static int[] solution(int[] arr) {
         int[] answer = new int[10];
+//        int[] answer = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             answer[arr[i]]++;
         }
