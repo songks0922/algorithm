@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 using namespace std;
 
 int buffA[60], buffB[60];
@@ -30,10 +29,10 @@ int main() {
     }
   }
 
-  for (int i = 0; i < 52; i++) {
+  for (int i = 0; i <= 52; i++) {
     if (buffA[i] != buffB[i]) {
       cout << "NO\n";
-      exit(0);
+      return 0;
     }
   }
 
