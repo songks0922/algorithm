@@ -1,0 +1,1 @@
+{"name":"Local: 11727","url":"c:\\dev\\algorithm\\Baekjoon\\11727.cpp","tests":[{"id":1665729952751,"input":"2","output":"3"},{"id":1665729968087,"input":"8","output":"171"},{"id":1665730465167,"input":"12","output":"2731"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\algorithm\\Baekjoon\\11727.cpp","group":"local","local":true}

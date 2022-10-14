@@ -1,0 +1,1 @@
+{"name":"Local: fastpow","url":"c:\\dev\\algorithm\\algolab\\hw3\\fastpow.cpp","tests":[{"id":1664870057757,"input":"3\n2 16\n2 0\n9 2147483647","output":"536\n1\n369"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\dev\\algorithm\\algolab\\hw3\\fastpow.cpp","group":"local","local":true}
