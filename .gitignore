@@ -23,7 +23,7 @@ doc/**/*.pdf
 
 # ignore .exe
 *.exe
-
+**/.cph
 .vscode
 .vscode/settings.json
 .prettierrc
