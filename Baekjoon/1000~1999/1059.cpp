@@ -9,7 +9,7 @@ int main() {
   cin.tie(0);
   cout.tie(0);
   
-  int l, s, n, ans = 0, left, right;
+  int l, s, n, left, right;
   bool flag = true;
   vector<int> v;
 
