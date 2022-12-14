@@ -37,7 +37,6 @@ void merge(int x, int y) {
   }
 }
 
-// kruskal algorithm function
 int kruskal(Edge edges[]) {
   int total = 0;
   for (int i = 0; i < m; i++) {
