@@ -11,12 +11,8 @@ public class ch1_1 {
         str = str.toUpperCase();
         t = Character.toUpperCase(t);
 
-        for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
-
-            if (t == c) {
-                answer++;
-            }
+        for (char c : str.toCharArray()) {
+            if (c == t) answer++;
         }
 
         return answer;
