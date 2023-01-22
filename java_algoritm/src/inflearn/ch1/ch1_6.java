@@ -1,17 +1,20 @@
-package inflearn;
+package inflearn.ch1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class ch1_8 {
+public class ch1_6 {
 
     private static String solution(String str) {
-        str = str.toUpperCase().replaceAll("[^A-Z]", "");
-        String reverse = new StringBuilder(str).reverse().toString();
+        StringBuilder answer = new StringBuilder();
 
-        if (str.equals(reverse)) return "YES";
-        return "NO";
+        for (int i = 0; i < str.length(); i++) {
+            if (i == str.indexOf(str.charAt(i))) answer.append(str.charAt(i));
+        }
+
+        return answer.toString();
+
     }
 
     public static void main(String[] args) throws IOException {
@@ -20,6 +23,6 @@ public class ch1_8 {
         String str = br.readLine();
 
         System.out.println(solution(str));
-    }
 
+    }
 }
