@@ -1,48 +1,30 @@
 package inflearn.ch2;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.Scanner;
 
 public class ch2_4 {
 
-    private static String solution(int[] A, int[] B, int N) {
-        StringBuilder answer = new StringBuilder();
+    static int[] memo = new int[50];
 
-        for (int i = 0; i < N; i++) {
-            if (A[i] == B[i]) {
-                answer.append("D").append("\n");
-            }
-            if (A[i] - B[i] == 1) {
-                answer.append("A").append("\n");
-            }
-            if (A[i] - B[i] == -1) {
-                answer.append("B").append("\n");
-            }
-            if (A[i] - B[i] == 2) {
-                answer.append("B").append("\n");
-            }
-            if (A[i] - B[i] == -2) {
-                answer.append("A").append("\n");
-            }
+    private static int fibo(int n) {
+        if (n <= 1) {
+            memo[n] = n;
+            return memo[n];
         }
-
-        return answer.toString();
+        if (memo[n] != 0) {
+            return memo[n];
+        } else {
+            return memo[n] = fibo(n - 2) + fibo(n - 1);
+        }
     }
 
-    private static int[] convert(String input) {
-        String[] arr = input.split(" ");
-        return Arrays.stream(arr).mapToInt(Integer::parseInt).toArray();
-    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        int N = Integer.parseInt(br.readLine());
-        int[] A = convert(br.readLine());
-        int[] B = convert(br.readLine());
-
-        System.out.print(solution(A, B, N));
+        int N = sc.nextInt();
+        fibo(N);
+        for (int i = 1; i <= N; i++) {
+            System.out.print(memo[i] + " ");
+        }
     }
 }
