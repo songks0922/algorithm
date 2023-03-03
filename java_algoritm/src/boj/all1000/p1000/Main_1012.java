@@ -23,33 +23,62 @@ public class Main_1012 {
         }
     }
 
-    static List<List<Node>> list;
     static boolean[][] visited;
+    static int[][] board;
+    static int M, N;
+
+    public static void dfs(int x, int y) {
+        visited[x][y] = true;
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (nx < N && ny < M && nx >= 0 && ny >= 0) {
+                if (!visited[nx][ny] && board[nx][ny] == 1) {
+                    dfs(nx, ny);
+                }
+            }
+        }
+
+    }
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int t = Integer.parseInt(br.readLine());
+        int T = Integer.parseInt(br.readLine());
 
-        for (int i = 0; i < t; i++) {
+        while (T-- > 0) {
             StringTokenizer st = new StringTokenizer(br.readLine());
 
-            int m = Integer.parseInt(st.nextToken());
-            int n = Integer.parseInt(st.nextToken());
-            int k = Integer.parseInt(st.nextToken());
+            M = Integer.parseInt(st.nextToken());
+            N = Integer.parseInt(st.nextToken());
+            int K = Integer.parseInt(st.nextToken());
 
-            list = new ArrayList<>();
-            visited = new boolean[m + 1][n + 1];
+            board = new int[N][M];
+            visited = new boolean[N][M];
 
-            for (int j = 0; j <= m; j++) {
-                list.add(new ArrayList<>());
+            for (int i = 0; i < K; i++) {
+                st = new StringTokenizer(br.readLine());
+
+                int x = Integer.parseInt(st.nextToken());
+                int y = Integer.parseInt(st.nextToken());
+
+                board[y][x] = 1;
+            }
+            int count = 0;
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < M; j++) {
+                    if (board[i][j] == 1 && !visited[i][j]) {
+                        dfs(i, j);
+                        count++;
+                    }
+                }
             }
 
-            for (int j = 0; j < k; j++) {
-//                list.get(m).add()
-            }
+            System.out.println(count);
         }
+
     }
 
 }
